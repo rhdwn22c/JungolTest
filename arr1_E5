@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main() {
+	double arr[6];
+	double avg = 0;
+	for (int i = 0; i < 6; i++) {
+		scanf("%lf", &arr[i]);
+		avg += arr[i];
+	}
+	printf("%.1lf", avg / 6);
+}
