@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+	int arr[100];
+	int sum = 0, mulfive = 0;
+	double avg = 0;
+	for (int i = 0; i < 100; i++) {
+		scanf("%d", &arr[i]);
+		if (arr[i] == 0) {
+			avg = (double)sum / mulfive;
+			break;
+		}
+		if (arr[i] % 5 == 0) {
+			mulfive++;
+			sum += arr[i];
+		}
+	}
+	printf("Multiples of 5 : %d\nsum : %d\navg : %.1lf", mulfive, sum, avg);
+
+}
