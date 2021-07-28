@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+	int arr[100];
+	for (int i = 0; i < 100; i++) {
+		scanf("%d", &arr[i]);
+		if (arr[i] == -1 && i > 3) {
+			printf("%d %d %d", arr[i - 3], arr[i - 2], arr[i - 1]);
+			return 0;
+		}
+		else if (arr[i] == -1 && i < 3) {
+			switch (i)
+			{
+			case 2 :
+				printf("%d %d", arr[i - 2], arr[i - 1]);
+				return 0;
+			case 1 :
+				printf("%d", arr[i - 1]);
+				return 0;
+			default:
+				printf("X");
+				break;
+			}
+		}
+	}
+}
