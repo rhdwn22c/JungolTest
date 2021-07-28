@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+	int num = 100, renum;
+	scanf("%d", &renum);
+	printf("%d ", num);
+	printf("%d ", renum);
+	for (int i = 0; i < 1000; i++) {
+		if (i % 2 == 0) {
+			printf("%d ", num - renum);
+			num = num - renum;
+		}
+		else if (i % 2 == 1) {
+			printf("%d ", renum - num);
+			renum = renum - num;
+		}
+		if (num < 0 || renum < 0) {
+			return 0;
+		}
+	}
+}
