@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+	int arr[100];
+	int count = 0;
+	for (int i = 0; i < 100; i++) {
+		scanf("%d", &arr[i]);
+		
+		if (arr[i] % 2 == 0) {
+			arr[i] /= 2;
+		}
+		else if (arr[i] % 2 == 1) {
+			arr[i] *= 2;
+		}
+		if (arr[i] == 0) {
+			count = i;
+			break;
+		}
+	}
+	printf("%d\n", count);
+	for (int i = 0; i < 100; i++) {
+		if (arr[i] == 0) {
+			break;
+		}
+		printf("%d ", arr[i]);
+		
+	}
+}
