@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+	int arr[5][4];
+	int count = 0, plus = 0;
+	double avg = 0;
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 4; j++) {
+			scanf("%d", &arr[i][j]);
+		}
+	}
+	for (int i = 0; i < 5; i++) {
+		for (int j = 0; j < 4; j++) {
+			avg = avg + (double)arr[i][j];
+		}
+		avg /= 4;
+		if (avg >= 80) {
+			printf("pass\n");
+			count++;
+		}
+		else {
+			printf("fail\n");
+		}
+		avg = 0;
+	}
+	printf("Successful : %d", count);
+
+}
