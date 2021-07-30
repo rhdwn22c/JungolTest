@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int add(int a, int b) {
+	return a + b;
+}
+int sub(int a, int b) {
+	return a - b;
+}
+int mul(int a, int b) {
+	return a * b;
+}
+int div(int a, int b) {
+	return a / b;
+}
+
+int main() {
+	
+	int a, b;
+	char ari;
+	scanf("%d %c %d", &a, &ari, &b);
+	if (ari == '+') {
+		printf("%d %c %d = %d", a, ari, b, add(a, b));
+	}
+	else if (ari == '-') {
+		printf("%d %c %d = %d", a, ari, b, sub(a, b));
+	}
+	else if (ari == '*') {
+		printf("%d %c %d = %d", a, ari, b, mul(a, b));
+	}
+	else if (ari == '/') {
+		printf("%d %c %d = %d",a, ari, b, div(a, b));
+	}
+	else {
+		printf("%d %c %d = 0", a, ari, b);
+	}
+}
