@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int f() {
+	char arr[3][10] = { "first", "second", "third" };
+	for (int i = 0; i < 3; i++) {
+		printf("%s\n", arr[i]);
+		printf("@@@@@@@@@@\n");
+	}
+}
+
+int main() {
+	
+	f();
+	
+}
