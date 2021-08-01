@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>
+
+int f(int a) {
+	double radius;
+	radius = sqrt(a / 3.14);
+	printf("%.2lf", radius);
+	
+}
+
+int main() {
+	
+	int a;
+	scanf("%d", &a);
+	f(a);
+		
+}
