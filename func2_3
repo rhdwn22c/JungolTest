@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int INT(int a, int b) {
+	int bignum;
+	bignum = abs(a) > abs(b) ? a : b;
+	printf("%d\n", bignum);
+	
+}
+double DOUBLE(double c, double d) {
+	double smallnum;
+	smallnum = fabs(c) < fabs(d) ? c : d;
+	printf("%.2lf", smallnum);
+}
+
+int main() {
+	
+	int a, b;
+	double c, d;
+	scanf("%d %d", &a, &b);
+	scanf("%lf %lf", &c, &d);
+	INT(a, b);
+	DOUBLE(c, d);
+	
+}
